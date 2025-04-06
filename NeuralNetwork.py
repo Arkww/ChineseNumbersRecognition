@@ -21,11 +21,11 @@ class NeuralNet(nn.Module):
         self.dropout = nn.Dropout(p=0.5)
 
         # Fully connected layers
-        self.fc1 = nn.Linear(512 * 4 * 4, 1024)  # Adjusted for 4x4 feature map size
+        self.fc1 = nn.Linear(512 * 2 * 2, 1024) 
         self.fc2 = nn.Linear(1024, 512)
         self.fc3 = nn.Linear(512, 15)  # Output layer with 15 classes
 
-        # Initialize weights (e.g., Xavier initialization for conv and linear layers)
+        
         self._initialize_weights()
 
     def _initialize_weights(self):
